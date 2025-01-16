@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Events Example</title>
+  <style>
+    #mouse-div {
+      width: 200px;
+      height: 200px;
+      background-color: #f99595;
+      border: 1px solid #f7db24;
+    }
+  </style>
+</head>
+<body>
+  <div id="mouse-div"></div>
+  
+  <script>
+    const mouseDiv = document.getElementById("mouse-div");
+    
+    // Mouseover event
+    mouseDiv.addEventListener("mouseover", function() {
+      console.log("Mouseover event triggered");
+      mouseDiv.style.backgroundColor="red";
+    });
+    
+    // Mouseout event
+    mouseDiv.addEventListener("mouseout", function() {
+      console.log("Mouseout event triggered");
+      mouseDiv.style.backgroundColor = "#000";
+    });
+    
+    // Mousedown event
+    mouseDiv.addEventListener("mousedown", function() {
+      console.log("Mousedown event triggered");
+      mouseDiv.style.border = "2px solid blue";
+    });
+    
+    // Mouseup event
+    mouseDiv.addEventListener("mouseup", function() {
+      console.log("Mouseup event triggered");
+      mouseDiv.style.border = "1px solid #3b2020";
+    });
+    
+    // Click event
+    mouseDiv.addEventListener("click", function() {
+      console.log("Click event triggered");
+      mouseDiv.style.backgroundColor = "green";
+    });
+    
+    // Dblclick event
+    mouseDiv.addEventListener("dblclick", function() {
+      console.log("Dblclick event triggered");
+      mouseDiv.style.backgroundColor = "yellow";
+    });
+    
+    // Mousemove event
+    mouseDiv.addEventListener("mousemove", function(event) {
+      console.log("Mousemove event triggered");
+      console.log(`Mouse position: (${event.clientX}, ${event.clientY})`);
+    });
+  </script>
+</body>
+</html>
